@@ -274,7 +274,7 @@ console.log(Number.isFinite(20));
 console.log(Number.isFinite(`20`));
 console.log(Number.isFinite(+`20px`));
 console.log(Number.isFinite(23 / 0));
-*/
+
 
 console.log(Math.sqrt(25));
 console.log(25 ** (1 / 2));
@@ -307,3 +307,21 @@ console.log(Math.floor(-23.6));
 console.log((2.7).toFixed(0));
 console.log((2.7).toFixed(3));
 console.log(+(2.345).toFixed(2));
+*/
+
+console.log(5 % 2);
+console.log(8 % 3);
+
+console.log(6 % 2);
+
+const isEven = n => n % 2 === 0;
+console.log(isEven(8));
+console.log(isEven(23));
+console.log(isEven(514));
+
+labelBalance.addEventListener(`click`, function () {
+  [...document.querySelectorAll(`.movements__row`)].forEach(function (row, i) {
+    if (i % 2 === 0) row.style.backgroundColor = `orangered`;
+    if (i % 3 === 0) row.style.backgroundColor = `blue`;
+  });
+});
