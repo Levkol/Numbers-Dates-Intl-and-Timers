@@ -307,7 +307,7 @@ console.log(Math.floor(-23.6));
 console.log((2.7).toFixed(0));
 console.log((2.7).toFixed(3));
 console.log(+(2.345).toFixed(2));
-*/
+
 
 console.log(5 % 2);
 console.log(8 % 3);
@@ -325,3 +325,10 @@ labelBalance.addEventListener(`click`, function () {
     if (i % 3 === 0) row.style.backgroundColor = `blue`;
   });
 });
+*/
+
+const diameter = 287_460_000_000;
+console.log(diameter);
+
+console.log(Number(`230_000`));
+console.log(parseInt(`230_000`));
