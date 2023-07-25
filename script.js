@@ -601,7 +601,6 @@ console.log(
   navigator.language,
   new Intl.NumberFormat(navigator.language, options).format(num)
 );
-*/
 
 ///////////////////////////////////////
 // Timers
@@ -622,3 +621,39 @@ setInterval(function () {
   const now = new Date();
   console.log(now);
 }, 1000);
+*/
+
+// Coding challenge 1
+// creating a real clock that's only login the current hour, minutes and seconds to the console.
+// setInterval(function(){
+//   const now = new Date();
+//   console.log(now);
+// }, 1000)
+
+
+// const properties ={
+//   hour: `numeric`,
+//   minutes: `numeric`,
+//   seconds: `numeric`,
+// }
+// console.log(`Current clock: ${setInterval(()=> properties, 1000) }`);
+
+// Function expression to create a real-time clock
+const realTimeClock = function () {
+  const today = new Date(); // Get the current date and time
+  const hours = today.getHours(); // Get the current hour (0-23)
+  const minutes = today.getMinutes(); // Get the current minute (0-59)
+  const seconds = today.getSeconds(); // Get the current second (0-59)
+
+  // Add leading zeros to single-digit numbers for better formatting
+  const formattedHours = String(hours).padStart(2, '0');
+  const formattedMinutes = String(minutes).padStart(2, '0');
+  const formattedSeconds = String(seconds).padStart(2, '0');
+
+  // Display the current time in the console
+  console.log(`${formattedHours}:${formattedMinutes}:${formattedSeconds}`);
+};
+
+// Call the realTimeClock function every second
+setInterval(realTimeClock, 1000);
+
